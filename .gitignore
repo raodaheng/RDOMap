@@ -4,3 +4,6 @@ node_modules/
 assets/js/salesman.js
 rdo/
 desktop.ini
+dev/snapshot/bots
+dev/snapshot/_long
+dev/snapshot/_short
