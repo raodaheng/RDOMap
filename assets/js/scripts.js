@@ -57,12 +57,12 @@ var plantsDisabledByDefault = plants;
 
 var shops = [
   'barber', 'butcher', 'doctor', 'fence', 'general_store', 'gunsmith', 'honor', 'photo_studio',
-  'post_office', 'saloon', 'stable', 'tackle', 'tailor'
+  'post_office', 'saloon', 'stable', 'tackle', 'tailor', 'musician', 'trapper', 'harriet'
 ];
 
 var shopsDisabledByDefault = [
   'barber', 'butcher', 'doctor', 'fence', 'general_store', 'gunsmith', 'honor', 'photo_studio',
-  'stable', 'tackle', 'tailor'
+  'stable', 'tackle', 'tailor', 'musician'
 ];
 
 var camps = [

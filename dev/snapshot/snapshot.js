@@ -965,6 +965,21 @@ const collectableIndividual = [
     { "name": "wands_two_6", "type": "short", "url": "http://localhost/?q=wands_two&cycles=6" },
 ];
 
+const nazar = [
+    { "name": "nazar_1", "type": "short", "url": "http://localhost/?q=nazar&cycles=1" },
+    { "name": "nazar_2", "type": "short", "url": "http://localhost/?q=nazar&cycles=2" },
+    { "name": "nazar_3", "type": "short", "url": "http://localhost/?q=nazar&cycles=3" },
+    { "name": "nazar_4", "type": "short", "url": "http://localhost/?q=nazar&cycles=4" },
+    { "name": "nazar_5", "type": "short", "url": "http://localhost/?q=nazar&cycles=5" },
+    { "name": "nazar_6", "type": "short", "url": "http://localhost/?q=nazar&cycles=6" },
+    { "name": "nazar_7", "type": "short", "url": "http://localhost/?q=nazar&cycles=7" },
+    { "name": "nazar_8", "type": "short", "url": "http://localhost/?q=nazar&cycles=8" },
+    { "name": "nazar_9", "type": "short", "url": "http://localhost/?q=nazar&cycles=9" },
+    { "name": "nazar_10", "type": "short", "url": "http://localhost/?q=nazar&cycles=10" },
+    { "name": "nazar_11", "type": "short", "url": "http://localhost/?q=nazar&cycles=11" },
+    { "name": "nazar_12", "type": "short", "url": "http://localhost/?q=nazar&cycles=12" },
+]
+
 let sites = [];
 
 [1, 2, 3, 4, 5, 6].forEach(i => {
@@ -986,6 +1001,7 @@ sites = sites.concat(shops);
 sites = sites.concat(camps);
 sites = sites.concat(gfh);
 sites = sites.concat(misc);
+sites = sites.concat(nazar);
 
 const bar = new ProgressBar('[:bar] :current/:total (:percent)', {
     complete: '=',
