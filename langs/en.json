@@ -676,5 +676,11 @@
     "map.gfh.wallace_train_clerk.name": "Train Clerk",
     "map.gfh.wallace_train_clerk.desc": "This train clerk mostly offers delivery, escort, recovery, and hunting missions.",
     "map.gfh.war_vet.name": "Hamish Sinclair",
-    "map.gfh.war_vet.desc": "Hamish Sinclair, an old war veteran living by himself in the wilderness, has rescue and recovery work from time to time."
+    "map.gfh.war_vet.desc": "Hamish Sinclair, an old war veteran living by himself in the wilderness, has rescue and recovery work from time to time.",
+    "map.shops.musician.name": "Musician",
+    "map.shops.musician.desc": "A musician can occasionally be found playing here.",
+    "map.shops.harriet.name": "Harriet",
+    "map.shops.harriet.desc": "Harriet runs a store for Naturalists where you can purchase a range of tonics and items to aid your studies. You can also sell animal samples here.",
+    "map.shops.trapper.name": "Gus",
+    "map.shops.trapper.desc": "Gus is a skilled Trapper who can craft unique trinkets, clothing and equipment, providing you bring him the materials he needs. He also buys whole animals, skins, furs, hides and feathers."
 }
