@@ -33,7 +33,8 @@ var categories = [
   'moonshiner_sabotage', 'nazar', 'plants', 'rescue', 'rival_collector', 'runaway_wagon',
   'shops', 'sightseeing', 'trains', 'treasure', 'treasure_hunter', 'tree_map', 'user_pins',
   'wounded_animal', 'camps', 'animal_attack', 'kidnapped', 'discoverables', 'legendary_animals',
-  'beggar', 'stalking_hunter', 'slumped_hunter', 'crashed_wagon', 'suspension_trap', 'gfh'
+  'beggar', 'stalking_hunter', 'slumped_hunter', 'crashed_wagon', 'suspension_trap', 'gfh',
+  'poacher_hideout'
 ];
 
 var categoriesDisabledByDefault = [
@@ -42,7 +43,7 @@ var categoriesDisabledByDefault = [
   'moonshiner_roadblock', 'moonshiner_sabotage', 'rescue', 'rival_collector', 'runaway_wagon',
   'sightseeing', 'treasure_hunter', 'tree_map', 'wounded_animal', 'camps', 'animal_attack',
   'kidnapped', 'discoverables', 'beggar', 'stalking_hunter', 'slumped_hunter', 'crashed_wagon',
-  'suspension_trap', 'gfh'
+  'suspension_trap', 'gfh', 'poacher_hideout'
 ];
 
 var plants = [
