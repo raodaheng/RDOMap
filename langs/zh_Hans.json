@@ -56,7 +56,7 @@
     "menu.show_help": "在悬停时显示帮助",
     "menu.toggle_debug": "切换至调试模式",
     "menu.tooltip": "",
-    "menu.tooltip_disabled": "",
+    "menu.tooltip_disabled": "禁用",
     "menu.tooltip_enabled": "",
     "menu.trains": "火车",
     "menu.treasure_hunter": "宝藏猎人",
