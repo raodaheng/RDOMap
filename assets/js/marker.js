@@ -1,11 +1,12 @@
 class Marker {
-  constructor(text, lat, lng, category, subdata, size) {
+  constructor(text, lat, lng, category, subdata, size, time) {
     this.text = text;
     this.lat = lat;
     this.lng = lng;
     this.category = category;
     this.subdata = subdata;
     this.size = size;
+    this.time = time;
     this.title = (() => {
       switch (this.category) {
         case 'plants':

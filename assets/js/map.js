@@ -244,10 +244,10 @@ var MapBase = {
       $.each(_markers, function (_key, marker) {
         if (Array.isArray(marker)) {
           $.each(marker, function (_, submarker) {
-            MapBase.markers.push(new Marker(marker.text || _key, submarker.lat, submarker.lng, _category, _key, null, submarker.size));
+            MapBase.markers.push(new Marker(marker.text || _key, submarker.lat, submarker.lng, _category, _key, null, submarker.size, marker.time));
           });
         } else {
-          MapBase.markers.push(new Marker(marker.text || _category, marker.lat, marker.lng, _category, null, marker.size));
+          MapBase.markers.push(new Marker(marker.text || _category, marker.lat, marker.lng, _category, null, marker.size, marker.time));
         }
       });
     });
@@ -551,7 +551,8 @@ var MapBase = {
           ${shadow}
         `,
         marker: marker.text,
-        category: marker.category
+        category: marker.category,
+        time: marker.time
       })
     });
 
