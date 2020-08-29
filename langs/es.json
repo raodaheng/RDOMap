@@ -598,7 +598,7 @@
     "menu.small_btn": "Campamentos pequeños",
     "menu.large_btn": "Campamentos grandes",
     "menu.fme_display": "Mostrar eventos del Modo Libre",
-    "help.fme_display": "Allows you to choose whether to display the next general events, role events, both, or none and when exactly they'll start.",
+    "help.fme_display": "Te permite elegir si mostrar el siguiente Evento del Modo Libre y cuando empezará exactamente.",
     "menu.fme_display_general_period": "Periodo de visualización de los eventos generales",
     "help.fme_display_general_period": "Te permite seleccionar la cantidad máxima de minutos que quieras mostrar los eventos generales del modo libre. Todo evento luego de esta cantidad no será mostrado.",
     "menu.fme_display_role_period": "Tiempo de visualización de eventos de rol",
