@@ -259,6 +259,7 @@
     "san_luis_treasure": "San Luis Shore",
     "southren_roanoke_treasure": "Southern Roanoke",
     "west_hill_haven_treasure": "West Hill Haven",
+    "map.timed_event": "This event is available from {start} to {end}.",
     "map.ambush.name": "Ambush",
     "map.ambush.desc": "This is a Random Encounter. Visiting the area might trigger an ambush in the form of a shootout, or a person calling for help before calling for reinforcement.",
     "map.boats.name": "Boat",
