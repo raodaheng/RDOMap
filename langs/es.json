@@ -110,7 +110,7 @@
     "help.pins_place_new": "Crea un nuevo marcador en el centro del mapa de visualización actual.",
     "help.read_wiki": "Abre una nueva pestaña con la wiki para este mapa, en caso de que necesites aún más información.",
     "help.report_issues": "Abre una nueva pestaña en la página de GitHub, donde puede reportar problemas o sugerir nuevas características.",
-    "help.search_copy_link": "Copies the current search link to your clipboard so you can browse to the map with that search query.",
+    "help.search_copy_link": "Copia el enlace de búsqueda actual al portapapeles para que puedas buscar en el mapa con esa consulta de búsqueda.",
     "help.search": "Te permite buscar ítems que desees visualizar. Todos los otros ítems estarán ocultos.",
     "help.show_all": "Muestra todos los marcadores en el mapa.",
     "help.show_coords": "Alterna si las coordenadas deben visualizarse cuando hagas clic en algún lugar del mapa.",
