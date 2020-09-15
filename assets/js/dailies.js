@@ -49,8 +49,8 @@ class Dailies {
         });
         this.onLanguageChanged();
       })
-      .then(Loader.mapModelLoaded)
       .catch(this.dailiesNotUpdated)
+      .then(Loader.mapModelLoaded)
       .then(SynchronizeDailies.init)
       
   }
@@ -105,6 +105,9 @@ class SynchronizeDailies {
     this.markers = marker;
   }
   static init() {
+    if (!Settings.syncMapToDailies)
+      return Promise.resolve();
+
     $('.menu-hide-all').trigger('click');
     Dailies.markersCategories.forEach(element => {
       const [category, marker] = element;
@@ -117,6 +120,7 @@ class SynchronizeDailies {
   sync() {
     this.key = (() => {
       switch (this.category) {
+        // TODO fix animals names in possible_dailies.json
         case 'animals':
           return `menu.cmpndm.animal_${this.markers}`;
         case 'fish':
@@ -129,7 +133,7 @@ class SynchronizeDailies {
         case 'nazar':
           return `menu.${this.markers}`;
         default:
-          console.log(`${this.category} ${this.markers} not found`);
+          console.log(`${this.category} ${this.markers} not found`); // only temporary
       }
     })();
     $(`[data-text="${this.key}"]`).trigger('click');

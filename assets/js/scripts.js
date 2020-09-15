@@ -72,6 +72,8 @@ function init() {
   $('#show-help').prop("checked", Settings.showHelp);
   $('#timestamps-24').prop("checked", Settings.isClock24Hour);
   $('#show-dailies').prop("checked", Settings.showDailies);
+  $('#sync-map-to-dailies').prop("checked", Settings.syncMapToDailies);
+  
   $('#show-coordinates').prop("checked", Settings.isCoordsOnClickEnabled);
 
   $('#enable-debug').prop("checked", Settings.isDebugEnabled);
@@ -276,6 +278,11 @@ $('#timestamps-24').on('change', function () {
 $('#show-dailies').on('change', function () {
   Settings.showDailies = $("#show-dailies").prop('checked');
   $('.daily-challenges').toggle(Settings.showDailies);
+});
+
+$('#sync-map-to-dailies').on('change', function () {
+  Settings.syncMapToDailies = $("#sync-map-to-dailies").prop('checked');
+  SynchronizeDailies.init();
 });
 
 $('#show-coordinates').on('change', function () {
