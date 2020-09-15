@@ -34,7 +34,7 @@ var categories = [
   'shops', 'sightseeing', 'trains', 'treasure', 'treasure_hunter', 'tree_map', 'user_pins',
   'wounded_animal', 'camps', 'animal_attack', 'kidnapped', 'discoverables', 'legendary_animals',
   'beggar', 'stalking_hunter', 'slumped_hunter', 'crashed_wagon', 'suspension_trap', 'gfh',
-  'poacher_hideout', 'harrietum'
+  'poacher_hideout'
 ];
 
 var categoriesDisabledByDefault = [
@@ -51,7 +51,8 @@ var plants = [
   'chanterelles', 'common_bulrush', 'creeping_thyme', 'desert_sage', 'english_mace', 'evergreen_huckleberry',
   'golden_currant', 'hummingbird_sage', 'milkweed', 'parasol_mushroom', 'oleander_sage', 'oregano',
   'prairie_poppy', 'red_raspberry', 'rams_head', 'red_sage', 'indian_tobacco', 'vanilla_flower',
-  'violet_snowdrop', 'wild_carrots', 'wild_feverfew', 'wild_mint', 'wintergreen_berry', 'yarrow'
+  'violet_snowdrop', 'wild_carrots', 'wild_feverfew', 'wild_mint', 'wintergreen_berry', 'yarrow',
+  'harrietum'
 ];
 
 var plantsDisabledByDefault = plants;

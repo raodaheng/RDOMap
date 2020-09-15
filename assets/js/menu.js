@@ -221,6 +221,8 @@ Menu.refreshMenu = function () {
     var collectibleTextWrapperElement = $('<span>').addClass('collectible-text');
     var collectibleTextElement = $('<p>').addClass('collectible').text(collectibleTitle);
 
+    if (collectibleText === 'harrietum') collectibleTextElement.css('color', '#fdc607');
+
     collectibleElement.on('contextmenu', function (e) {
       if ($.cookie('right-click') == null)
         e.preventDefault();
