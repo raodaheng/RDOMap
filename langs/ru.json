@@ -683,7 +683,5 @@
     "menu.poacher_hideout": "Пойманные животные",
     "map.poacher_hideout.name": "Пойманные животные (Натуралист)",
     "menu.join_discord": "Присоединяйтесь к нашему Discord серверу!",
-    "menu.harrietum": "Гариетум лекарственный",
-    "map.harrietum.name": "Гариетум лекарственный",
-    "map.harrietum.desc": "Соберите 3 или 5 из этих растений, чтобы получить возможность превратиться в животное."
+    "map.plants.harrietum.name": "Гариетум лекарственный"
 }
