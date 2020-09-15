@@ -499,8 +499,6 @@
     "map.crashed_wagon.desc": "To jest losowe spotkanie. Biały punkt na mini mapie wskaże spotkanie.",
     "map.suspension_trap.desc": "To jest losowe spotkanie. Biały punkt na mini mapie wskaże spotkanie.",
     "map.generic_not_released": "Tej zawartości nie ma jeszcze w grze.",
-    "menu.small_btn": "Obozy małe",
-    "menu.large_btn": "Obozy duże",
     "menu.fme_display": "Wydarzenia gry swobodnej",
     "help.fme_display": "Pozwala wybrać, czy mają być wyświetlane kolejne zdarzenia ogólne, zdarzenia roli, oba, czy też żadne, i kiedy dokładnie się zaczną.",
     "menu.fme_display_general_period": "Okres wyświetlania wydarzeń głównych",

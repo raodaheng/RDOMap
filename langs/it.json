@@ -585,8 +585,6 @@
     "map.suspension_trap.name": "Trappola di Sospensione",
     "map.suspension_trap.desc": "Questo è un Incontro Casuale. Un puntino bianco sulla mini mappa indicherà l'incontro.",
     "map.generic_not_released": "Questo contenuto non è ancora nel gioco.",
-    "menu.small_btn": "Piccoli campi",
-    "menu.large_btn": "Grandi campi",
     "menu.fme_display": "Visualizzazione eventi modalità libera",
     "help.fme_display": "Ti consente di scegliere se mostrare gli eventi generali successivi, gli eventi del ruolo, entrambi o nessuno e quando si avvieranno esattamente.",
     "menu.fme_display_general_period": "Periodo di visualizzazione dell'Evento Generale",

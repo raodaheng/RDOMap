@@ -578,8 +578,6 @@
     "map.crashed_wagon.name": "Kaputte Kutsche",
     "map.crashed_wagon.desc": "Das ist eine zufällige Begegnung. Ein weisser Punkt erscheint auf der Minimap.",
     "map.suspension_trap.desc": "Das ist eine zufällige Begegnung. Ein weisser Punkt erscheint auf der Minimap.",
-    "menu.small_btn": "Kleine Lager",
-    "menu.large_btn": "Große Lager",
     "menu.fme_display": "Anzeige Free Roam Event",
     "help.fme_display": "Hiermit können Sie auswählen, ob die nächsten allgemeinen Ereignisse, Rollenereignisse, beide oder keine Ereignisse angezeigt werden sollen, und wann genau sie gestartet werden sollen.",
     "menu.fme_display_general_period": "Anzeigezeitraum für allgemeine Ereignisse",

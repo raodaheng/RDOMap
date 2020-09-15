@@ -582,8 +582,6 @@
     "map.suspension_trap.name": "悬吊陷阱",
     "map.suspension_trap.desc": "这是一个随机遭遇。小地图上的白点会指示位置。",
     "map.generic_not_released": "该内容尚未加入游戏。",
-    "menu.small_btn": "小营地",
-    "menu.large_btn": "大营地",
     "menu.fme_display": "自由模式事件显示",
     "help.fme_display": "允许您选择是显示下一个常规活动，职业活动，还是全部显示还是不显示，以及何时开始显示。",
     "menu.fme_display_general_period": "常规活动时间",

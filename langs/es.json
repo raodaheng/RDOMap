@@ -576,8 +576,6 @@
     "map.suspension_trap.name": "Trampa de suspensión",
     "map.suspension_trap.desc": "Este es un Encuentro Aleatorio. Un punto blanco parpadeante en el mini mapa te indicará el encuentro.",
     "map.generic_not_released": "Este contenido no está todavía en el juego.",
-    "menu.small_btn": "Campamentos pequeños",
-    "menu.large_btn": "Campamentos grandes",
     "menu.fme_display": "Mostrar eventos del Modo Libre",
     "help.fme_display": "Te permite elegir si mostrar el siguiente Evento del Modo Libre y cuando empezará exactamente.",
     "menu.fme_display_general_period": "Periodo de visualización de los eventos generales",
