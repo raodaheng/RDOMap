@@ -98,6 +98,8 @@ class Dailies {
   }
 }
 
+
+// Still looking for a better way than trigger handlers, if you have any better idea feel free to modify it
 class SynchronizeDailies {
   constructor(category, marker) {
     this.category = category;
