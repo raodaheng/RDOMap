@@ -52,7 +52,6 @@ class Dailies {
       .catch(this.dailiesNotUpdated)
       .then(Loader.mapModelLoaded)
       .then(SynchronizeDailies.init)
-      
   }
   appendToMenu() {
     const structure = Language.get('menu.daily_challenge_structure').match(/\{(.+?)\}.*?\{(.+?)\}/);
@@ -120,13 +119,13 @@ class SynchronizeDailies {
   sync() {
     this.key = (() => {
       switch (this.category) {
-        // TODO fix animals names in possible_dailies.json
         case 'animals':
           return `menu.cmpndm.animal_${this.markers}`;
         case 'fish':
           return `menu.cmpndm.fish_${this.markers}`;
         case 'shops':
         case 'plants':
+        case 'gfh': 
           return `map.${this.category}.${this.markers}.name`;
         case 'menu':
           return `${this.category}.${this.markers}`;
