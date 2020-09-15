@@ -14,7 +14,7 @@ var MapBase = {
   fastTravelData: null,
   shopData: null,
   campData: null,
-  campDisabled: [],
+  campDisabled: ['wild'],
   dailyData: null,
   updateLoopAvailable: true,
   requestLoopCancel: false,
@@ -713,9 +713,10 @@ var MapBase = {
       $.each(MapBase.campData, function (category, categoryValue) {
         if (!enabledCamps.includes(category)) return;
         $.each(categoryValue, function (key, value) {
-          if (MapBase.campDisabled.includes(value.id)) return;
+          if (MapBase.campDisabled.includes(value.size)) return;
 
           var shadow = Settings.isShadowsEnabled ? '<img class="shadow" src="./assets/images/markers-shadow.png" alt="Shadow">' : '';
+          var icon = this.size === "wild" ? "wilderness.png" : "camps.png";
           var marker = L.marker([value.lat, value.lng], {
             opacity: Settings.markerOpacity,
             icon: L.divIcon({
@@ -723,7 +724,7 @@ var MapBase = {
               iconAnchor: [17 * Settings.markerSize, 42 * Settings.markerSize],
               popupAnchor: [0 * Settings.markerSize, -28 * Settings.markerSize],
               html: `
-                <img class="icon" src="./assets/images/icons/camps.png" alt="Icon">
+                <img class="icon" src="./assets/images/icons/${icon}" alt="Icon">
                 <img class="background" src="./assets/images/icons/marker_blue.png" alt="Background">
                 ${shadow}
               `

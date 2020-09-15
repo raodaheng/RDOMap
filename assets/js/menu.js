@@ -24,8 +24,8 @@ var Menu = {
       $('.menu-hidden[data-type=encounters]').append(collectibleElement.append(collectibleImage).append(collectibleTextElement));
     });
 
-    if(Settings.toolTip == 1)
-      tippy('[data-tippy-content]', {theme: 'rdr2-theme'});
+    if (Settings.toolTip == 1)
+      tippy('[data-tippy-content]', { theme: 'rdr2-theme' });
   },
 
 
@@ -44,8 +44,8 @@ var Menu = {
     });
 
     Menu.reorderMenu('.menu-hidden[data-type=treasure]');
-    if(Settings.toolTip == 1)
-      tippy('[data-tippy-content]', {theme: 'rdr2-theme'});
+    if (Settings.toolTip == 1)
+      tippy('[data-tippy-content]', { theme: 'rdr2-theme' });
   },
 
   refreshLegendaries: function () {
@@ -53,7 +53,7 @@ var Menu = {
 
     Legendary.data.filter(function (item) {
 
-      if(Legendary.notReleased.includes(item.text) && !Settings.isDebugEnabled)
+      if (Legendary.notReleased.includes(item.text) && !Settings.isDebugEnabled)
         return;
 
       var collectibleTitle = Language.get(item.text);
@@ -69,8 +69,8 @@ var Menu = {
     });
 
     Menu.reorderMenu('.menu-hidden[data-type=legendary_animals]');
-    if(Settings.toolTip == 1)
-      tippy('[data-tippy-content]', {theme: 'rdr2-theme'});
+    if (Settings.toolTip == 1)
+      tippy('[data-tippy-content]', { theme: 'rdr2-theme' });
   },
 
   refreshShops: function () {
@@ -169,28 +169,13 @@ var Menu = {
   },
 
   setCampSize: function (type) {
-    var aElement = type == 'small' ? 0 : 1;
-    var button = $($('[data-type=camps]').children('.collection-value').children('a')[aElement]);
-    if(button.hasClass('disabled')) {
-      Object.values(MapBase.campData).filter(region => 
-        region.filter(
-          function(camp) {
-          if(camp.size == type) {
-            MapBase.campDisabled = $.grep(MapBase.campDisabled, function(value) {
-              return value != camp.id;
-            });
-          }
-        }
-      ));
-      } else {
-      Object.values(MapBase.campData).filter(region => 
-        region.filter(
-          function(camp) {
-          if(camp.size == type) {
-            MapBase.campDisabled.push(camp.id);
-          }
-        }
-      ));
+    var button = $(`.toggle-camp-button[data-type=${type}]`);
+    if (button.hasClass('disabled')) {
+      var index = MapBase.campDisabled.indexOf(type);
+      MapBase.campDisabled.splice(index, 1);
+    } else {
+      if (!MapBase.campDisabled.includes(type))
+        MapBase.campDisabled.push(type);
     }
     button.toggleClass('disabled');
     MapBase.addMarkers();
@@ -296,8 +281,8 @@ Menu.refreshMenu = function () {
   Menu.reorderMenu('.menu-hidden[data-type=encounters]');
   Menu.reorderMenu('.menu-hidden[data-type=moonshiner_missions]');
 
-  if(Settings.toolTip == 1)
-    tippy('[data-tippy-content]', {theme: 'rdr2-theme'});
+  if (Settings.toolTip == 1)
+    tippy('[data-tippy-content]', { theme: 'rdr2-theme' });
 };
 
 Menu.showAll = function () {
@@ -335,4 +320,8 @@ $('#clear_highlights').on('click', function () {
   $.each(tempArray, function () {
     MapBase.highlightImportantItem(tempArray[0]);
   });
+});
+
+$('.toggle-camp-button').on('click', function () {
+  Menu.setCampSize($(this).attr('data-type'));
 });

@@ -564,6 +564,7 @@ select,
 }
 
 .side-menu .menu-hidden .collection-value a {
+    cursor: pointer;
     color: #fff;
 }
 
