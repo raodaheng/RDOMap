@@ -60,7 +60,7 @@ var Menu = {
       var collectibleElement = $('<div>').addClass('collectible-wrapper').attr('data-help', 'item').attr('data-tippy-content', collectibleTitle).attr('data-type', item.text);
       var collectibleTextElement = $('<p>').addClass('collectible').text(collectibleTitle);
 
-      collectibleElement.addClass(Legendary.notReleased.includes(item.text) ? 'not-found' : Legendary.psExclusive.includes(item.text) ? 'ps-exclusive' : '');
+      collectibleElement.addClass(Legendary.notReleased.includes(item.text) ? 'not-found' : '');
 
       if (!Legendary.enabledLegendaries.includes(item.text))
         collectibleElement.addClass('disabled');
