@@ -12,6 +12,7 @@ class Dailies {
     this.jsonData = [];
     this.dailiesList = [];
     this.context = $('.daily-challenges[data-type=dailies]');
+    this.markersCategories = [];
 
     const websiteData = Loader.promises['dailies'].consumeJson(data => this.dailiesList = data);
     const allDailies = Loader.promises['possible_dailies'].consumeJson(data => this.jsonData = data);
@@ -31,11 +32,13 @@ class Dailies {
         Object.keys(this.dailiesList.data).forEach(role => {
           this.categories.push(role);
           $('.dailies').append($(`<div id="${role}" class="daily-role"></div>`).toggleClass('hidden', role !== this.categories[0]));
-          this.dailiesList.data[role].forEach(({ daily, target }, index) => {
+          this.dailiesList.data[role].forEach(({ daily, target, category}, index) => {
             let translationKey;
             // temporary in try catch statement until we unify dailies lists
             try {
-              translationKey = this.jsonData.find(_daily => _daily.name.toLowerCase() === daily.toLowerCase()).key;
+              const dailyObject = this.jsonData.find(_daily => _daily.name.toLowerCase() === daily.toLowerCase());
+              translationKey = dailyObject.key;
+              this.markersCategories.push(dailyObject.category);
             } catch {
               translationKey = daily;
               console.info(`%c[Dailies] "${daily}" key not found`, 'color: #CD4822; background: #242424');
@@ -46,7 +49,10 @@ class Dailies {
         });
         this.onLanguageChanged();
       })
-      .catch(this.dailiesNotUpdated);
+      .then(Loader.mapModelLoaded)
+      .catch(this.dailiesNotUpdated)
+      .then(SynchronizeDailies.init)
+      
   }
   appendToMenu() {
     const structure = Language.get('menu.daily_challenge_structure').match(/\{(.+?)\}.*?\{(.+?)\}/);
@@ -90,5 +96,42 @@ class Dailies {
   }
   static onLanguageChanged() {
     Menu.reorderMenu(this.context);
+  }
+}
+
+class SynchronizeDailies {
+  constructor(category, marker) {
+    this.category = category;
+    this.markers = marker;
+  }
+  static init() {
+    $('.menu-hide-all').trigger('click');
+    Dailies.markersCategories.forEach(element => {
+      const [category, marker] = element;
+      if (marker === "") return;
+      const newSyncedCategory = new SynchronizeDailies(category, marker);
+      console.log(element);
+      newSyncedCategory.sync();
+    });
+  }
+  sync() {
+    this.key = (() => {
+      switch (this.category) {
+        case 'animals':
+          return `menu.cmpndm.animal_${this.markers}`;
+        case 'fish':
+          return `menu.cmpndm.fish_${this.markers}`;
+        case 'shops':
+        case 'plants':
+          return `map.${this.category}.${this.markers}.name`;
+        case 'menu':
+          return `${this.category}.${this.markers}`;
+        case 'nazar':
+          return `menu.${this.markers}`;
+        default:
+          console.log(`${this.category} ${this.markers} not found`);
+      }
+    })();
+    $(`[data-text="${this.key}"]`).trigger('click');
   }
 }
