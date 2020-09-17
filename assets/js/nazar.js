@@ -39,8 +39,15 @@ var MadamNazar = {
     if (MadamNazar.currentLocation == null || !enabledCategories.includes('nazar'))
       return;
 
+    var cl = MadamNazar.possibleLocations[MadamNazar.currentLocation - 1];
+
+    if (!cl) {
+      console.error("Madam Nazar location could not be found.");
+      return;
+    }
+
     var shadow = Settings.isShadowsEnabled ? '<img class="shadow" width="' + 35 * Settings.markerSize + '" height="' + 16 * Settings.markerSize + '" src="./assets/images/markers-shadow.png" alt="Shadow">' : '';
-    var marker = L.marker([MadamNazar.possibleLocations[MadamNazar.currentLocation - 1].x, MadamNazar.possibleLocations[MadamNazar.currentLocation - 1].y], {
+    var marker = L.marker([cl.x, cl.y], {
       icon: L.divIcon({
         iconSize: [35 * Settings.markerSize, 45 * Settings.markerSize],
         iconAnchor: [17 * Settings.markerSize, 42 * Settings.markerSize],
