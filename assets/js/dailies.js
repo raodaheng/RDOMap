@@ -1,4 +1,5 @@
 class Dailies {
+  'use strict';
   constructor(role, translationKey, target, index, value = 0) {
     this.role = role;
     this.translationKey = translationKey;
@@ -20,7 +21,7 @@ class Dailies {
     $('#dailies-prev').on('click', Dailies.prevCategory);
     $('#dailies-next').on('click', Dailies.nextCategory);
 
-    const dailiesDate = new Date(Date.now() - 21600000).toISOUTCDateString();  // 21600000 = 6 hours
+    const dailiesDate = new Date(Date.now() - 21600000).toISOUTCDateString(); // 21600000 = 6 hours
 
     return Promise.all([websiteData, allDailies])
       .then(() => {
@@ -32,7 +33,7 @@ class Dailies {
         Object.keys(this.dailiesList.data).forEach(role => {
           this.categories.push(role);
           $('.dailies').append($(`<div id="${role}" class="daily-role"></div>`).toggleClass('hidden', role !== this.categories[0]));
-          this.dailiesList.data[role].forEach(({ daily, target, category}, index) => {
+          this.dailiesList.data[role].forEach(({ daily, target }, index) => {
             let translationKey;
             // temporary in try catch statement until we unify dailies lists
             try {
@@ -49,9 +50,10 @@ class Dailies {
         });
         this.onLanguageChanged();
       })
-      .catch(this.dailiesNotUpdated)
       .then(Loader.mapModelLoaded)
       .then(SynchronizeDailies.init)
+      .catch(this.dailiesNotUpdated);
+
   }
   appendToMenu() {
     const structure = Language.get('menu.daily_challenge_structure').match(/\{(.+?)\}.*?\{(.+?)\}/);
@@ -101,6 +103,7 @@ class Dailies {
 
 // Still looking for a better way than trigger handlers, if you have any better idea feel free to modify it
 class SynchronizeDailies {
+  'use strict';
   constructor(category, marker) {
     this.category = category;
     this.markers = marker;
@@ -121,13 +124,12 @@ class SynchronizeDailies {
   sync() {
     this.key = (() => {
       switch (this.category) {
-        case 'animals':
-          return `menu.cmpndm.animal_${this.markers}`;
+        case 'animal':
         case 'fish':
-          return `menu.cmpndm.fish_${this.markers}`;
+          return `menu.cmpndm.${this.category}_${this.markers}`;
         case 'shops':
         case 'plants':
-        case 'gfh': 
+        case 'gfh':
           return `map.${this.category}.${this.markers}.name`;
         case 'menu':
           return `${this.category}.${this.markers}`;
@@ -137,6 +139,8 @@ class SynchronizeDailies {
           console.log(`${this.category} ${this.markers} not found`); // only temporary
       }
     })();
-    $(`[data-text="${this.key}"]`).trigger('click');
+
+    if ($(`[data-text="${this.key}"]`).parent().hasClass('disabled'))
+      $(`[data-text="${this.key}"]`).trigger('click');
   }
 }
