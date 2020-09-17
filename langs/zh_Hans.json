@@ -685,8 +685,8 @@
     "map.shops.trapper.desc": "Gus is a skilled Trapper who can craft unique trinkets, clothing and equipment, providing you bring him the materials he needs. He also buys whole animals, skins, furs, hides and feathers.",
     "menu.poacher_hideout": "Poached Animals",
     "map.poacher_hideout.name": "Poached Animals (Naturalist)",
-    "map.poacher_hideout.desc": "This is a Naturalist Poached Animals mission. A red circle on the mini map will indicate the mission. Kill any poachers and free the animal for a Naturalist XP reward.",
-    "menu.join_discord": "Join our Discord!",
-    "help.join_discord": "Opens new tab with collectors map Discord server.",
+    "map.poacher_hideout.desc": "这是一个博物学家偷猎动物的任务。小地图上的红色圆圈将指示任务。杀死所有偷猎者并释放动物，获得博物学家XP奖励。",
+    "menu.join_discord": "加入我们的 Discord",
+    "help.join_discord": "使用浏览器新窗口打开Discord",
     "map.plants.harrietum.name": "Harrietum Officinalis"
 }
