@@ -491,13 +491,6 @@
           <label class="input-checkbox-label" for="show-dailies"></label>
         </div>
       </div>
-      <div class="input-container" data-help="sync_map_to_dailies">
-        <label for="sync-map-to-dailies" data-text="menu.sync_map_to_dailies">Sync dailies with enabled markers</label>
-        <div class="input-checkbox-wrapper">
-          <input class="input-checkbox" type="checkbox" name="sync-map-to-dailies" value="1" id="sync-map-to-dailies" />
-          <label class="input-checkbox-label" for="sync-map-to-dailies"></label>
-        </div>
-      </div>
       <div class="input-container" data-help="show_coords">
         <label for="show-coordinates" data-text="menu.show_coords">Show coordinates on click</label>
         <div class="input-checkbox-wrapper">
@@ -519,6 +512,10 @@
     </div>
 
     <div class="dailies daily-challenges" data-type="dailies"></div>
+    <div class="input-container-noflex daily-challenges">
+      <button id="sync-map-to-dailies" type="button" class="btn btn-default"
+        data-text="menu.sync_map_to_dailies" data-help="sync_map_to_dailies">Sync map to dailies</button>
+    </div>
     <div class="header">
       <span class="header-border"></span>
       <h2 class="header-title" data-text="menu.import_export_title">Import/Export</h2>

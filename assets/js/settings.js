@@ -165,5 +165,4 @@ Object.entries({
   showUtilitiesSettings: { default: true },
   showTooltips: { default: true },
   showDailies: { default: true },
-  syncMapToDailies: { default: false },
 }).forEach(([name, config]) => SettingProxy.addSetting(Settings, name, config));

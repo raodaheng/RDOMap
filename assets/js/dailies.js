@@ -50,10 +50,7 @@ class Dailies {
         });
         this.onLanguageChanged();
       })
-      .then(Loader.mapModelLoaded)
-      .then(SynchronizeDailies.init)
       .catch(this.dailiesNotUpdated);
-
   }
   appendToMenu() {
     const structure = Language.get('menu.daily_challenge_structure').match(/\{(.+?)\}.*?\{(.+?)\}/);
@@ -78,7 +75,7 @@ class Dailies {
     $('.dailies').append($(`
       <div class="daily-not-found not-found">${Language.get('menu.dailies_not_found')}</div>
     `));
-    $('#dailies-changer-container').addClass('hidden');
+    $('#dailies-changer-container, #sync-map-to-dailies').addClass('hidden');
   }
   static nextCategory() {
     Dailies.categoryOffset = (Dailies.categoryOffset + 1).mod(Dailies.categories.length);
@@ -109,9 +106,6 @@ class SynchronizeDailies {
     this.markers = marker;
   }
   static init() {
-    if (!Settings.syncMapToDailies)
-      return Promise.resolve();
-
     $('.menu-hide-all').trigger('click');
     Dailies.markersCategories.forEach(element => {
       const [category, marker] = element;
@@ -135,12 +129,15 @@ class SynchronizeDailies {
           return `${this.category}.${this.markers}`;
         case 'nazar':
           return `menu.${this.markers}`;
+        case 'daily_location':
+          return `menu.${this.markers}.name`;
         default:
           console.log(`${this.category} ${this.markers} not found`); // only temporary
       }
     })();
 
-    if ($(`[data-text="${this.key}"]`).parent().hasClass('disabled'))
+    if ($(`[data-text="${this.key}"]`).parent().hasClass('disabled') ||
+      $(`[data-text="${this.key}"]`).parent().parent().hasClass('disabled'))
       $(`[data-text="${this.key}"]`).trigger('click');
   }
 }
