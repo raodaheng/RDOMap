@@ -254,7 +254,7 @@
     "menu.cmpndm.animal_owl_great": "부엉이 / 올빼미",
     "menu.cmpndm.animal_owl_californian": "부엉이 / 올빼미 - 서부",
     "menu.cmpndm.animal_pelican_white": "펠리컨",
-    "menu.cmpndm.animal_pheasant_ringneck": "꿩",
+    "menu.cmpndm.animal_pheasant_ringneck": "꿩 (고리목꿩)",
     "menu.cmpndm.animal_pigeon_bandtailed": "비둘기",
     "menu.cmpndm.animal_prairiechicken": "큰초원들뀡",
     "menu.cmpndm.animal_quail": "메추라기",
@@ -281,6 +281,8 @@
     "menu.cmpndm.fish_steelheadtrout": "무지개 송어",
     "mp_animal_alligator_legendary_01": "악어 #1 - 테카",
     "mp_animal_alligator_legendary_02": "악어 #2 - 썬",
+    "mp_animal_bear_legendary_01": "곰 #1 - 오위자",
+    "mp_animal_bear_legendary_02": "곰 #2 - 리지백 스피릿",
     "mp_animal_beaver_legendary_01": "비버 #1 - 지지",
     "mp_animal_beaver_legendary_02": "비버 #2 - 문",
     "mp_animal_beaver_legendary_03": "비버 #3 - 나이트",
@@ -392,5 +394,8 @@
     "map.gfh.the_boy.name": "보이",
     "map.gfh.thomas_skiff_captain.name": "토마스",
     "map.gfh.wallace_train_clerk.name": "역무원",
-    "map.gfh.war_vet.name": "해미쉬"
+    "map.gfh.war_vet.name": "해미쉬",
+    "map.shops.harriet.name": "해리엇",
+    "map.shops.trapper.name": "거스",
+    "map.plants.harrietum.name": "해리어텀 오피시날리스"
 }
