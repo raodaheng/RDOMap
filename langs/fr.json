@@ -549,6 +549,7 @@
     "menu.fme.fme_hot_property": "Possession recherchée",
     "menu.fme.fme_king_of_the_castle": "Roi du château",
     "menu.fme.fme_king_of_the_rail": "Baron du rail",
+    "menu.fme.fme_random": "Défi Aléatoire",
     "menu.fme.fme_role_animal_tagging": "Marquage d'animaux sauvages",
     "menu.fme.fme_role_condor_egg": "Œuf de condor",
     "menu.fme.fme_role_greatest_bounty_hunter": "Au nom de la Loi",
@@ -557,5 +558,7 @@
     "menu.fme.fme_role_supply_train": "Route commerciale",
     "menu.fme.fme_role_wreckage": "Récupération",
     "menu.fme.fme_wild_animal_kills": "Défi \"Chasse aux animaux sauvages\"",
+    "menu.close": "Fermer",
+    "map.gfh.shaky.name": "La Bafouille",
     "map.gfh.the_boy.name": "Le Mioche"
 }
