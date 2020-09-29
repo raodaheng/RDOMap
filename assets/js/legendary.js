@@ -15,7 +15,6 @@ var Legendary = {
 
   // Legendary animals not yet released.
   notReleased: [
-    'mp_animal_moose_legendary_01', 'mp_animal_moose_legendary_02',
     'mp_animal_panther_legendary_01', 'mp_animal_panther_legendary_02'
   ],
 

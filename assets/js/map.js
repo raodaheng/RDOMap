@@ -638,6 +638,24 @@ var MapBase = {
     console.info('%c[Fast travels] Loaded!', 'color: #bada55; background: #242424');
   },
 
+  rectangle: function (lat, lng, width, height) {
+    var latLng = L.latLng([lat, lng]);
+    var currentPoint = MapBase.map.latLngToContainerPoint(latLng);
+
+    var xDifference = width / 2;
+    var yDifference = height / 2;
+
+    var southWest = L.point((currentPoint.x - xDifference), (currentPoint.y - yDifference));
+    var northEast = L.point((currentPoint.x + xDifference), (currentPoint.y + yDifference));
+
+    var bounds = L.latLngBounds(MapBase.map.containerPointToLatLng(southWest), MapBase.map.containerPointToLatLng(northEast));
+    L.rectangle(bounds, {
+      color: "#fff799",
+      fillColor: "#fff799",
+      fillOpacity: 0.5
+    }).addTo(MapBase.map);
+  },
+
   addFastTravelMarker: function () {
     if (enabledCategories.includes('fast_travel')) {
       $.each(MapBase.fastTravelData, function (key, value) {
